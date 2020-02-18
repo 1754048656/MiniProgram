@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/imgage/image",
+    "pages/view/wiew",
+    "pages/button/button",
+    "pages/text/text",
     "pages/index/index"
-  ]
+  ],
+  "sitemapLocation": "sitemap44.json"
 }

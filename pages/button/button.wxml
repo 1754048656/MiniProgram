@@ -1,0 +1,29 @@
+<!--pages/button/button.wxml-->
+<!-- <text>pages/button/button.wxml</text> -->
+
+
+<button>button</button>
+
+
+<!-- size 调整按钮大小 -->
+<button size="mini">button</button>
+<button size="mini">button</button>
+----------------
+
+<!-- type 调整按钮样式 -->
+<button size="mini" type="primary">button</button>
+<button size="mini" type="default">button</button>
+<button size="mini" type="warn">button</button>
+------------
+
+
+<!-- plain  镂空效果 -->
+<button plain>button</button> 
+
+
+<!-- loading  加载效果-->
+<button loading="{{isTrue}}">button</button>
+
+
+<!-- hover-class -->
+<button hover-class="pressed">button</button>

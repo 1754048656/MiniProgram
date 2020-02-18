@@ -1,0 +1,10 @@
+<image src="/assets/common/favor.png" ></image>
+
+<!-- 导入相册图片 -->
+<button plain bindtap="handleChooseAlbum">button 导入</button>
+<image src="{{imagePath}}"></image>
+
+
+
+
+<image      src="http://p1.music.126.net/7HEZ0-jYeu-fboZX8Xleag==/109951164719986397.jpg?imageView&quality=89" wx:for="{{10}}" wx:key="item" bindload="imgLoad" lazy-load  show-menu-by-longpress></image>

@@ -1,0 +1,17 @@
+<view>view</view>
+<view>view</view>
+<view class="view">view</view>
+<view class="view2">view</view>
+
+
+
+<!--  hover-stop-propagation属性组织冒泡-->
+<view class="box1" hover-class="hover1">
+  <view class="box2" 
+        hover-class="hover2" 
+        hover-stop-propagation 
+        hover-start-time="500"
+        hover-stay-time="1000">
+    view
+  </view>
+</view>
