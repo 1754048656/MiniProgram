@@ -1,2 +1,23 @@
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
+<view>Hello {{message}}</view>
+<view>年龄 {{age}}</view>
+
+<!-- 列表展示 -->
+<view wx:for="{{list}}" wx:key="item">{{item.name}}:{{item.age}}</view>
+
+<view>当前计数：{{count}}</view>
+<button bindtap='add'>++++</button>
+<button bindtap='jian'>----</button>
+
+<!-- 2.获取用户信息的方式 -->
+<button open-type="getUserInfo">heheh</button>
+
+<!-- 3.展示用户信息的方式 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+
+<!-- 4.网络请求数据的展示 -->
+<view wx:for="{{list2}}" wx:key="item">{{item.title}}</view>
+
