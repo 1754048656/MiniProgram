@@ -1,0 +1,12 @@
+/* pages/mustache/mustache.wxss */
+
+.view1 {
+  font-size: 100rpx;
+  margin: 10rpx;
+  text-align: center;
+}
+
+.active {
+  color: purple;
+  border: 1rpx solid purple;
+}

@@ -1,5 +1,16 @@
 {
   "pages": [
-    "pages/index/index"
-  ]
+    "pages/tabcontorl/tabcontorl",
+    "pages/index/index",
+    "pages/wxs/wxs",
+    "pages/template/tamplate",
+    "pages/mustache/mustache",
+    "pages/wxss/wxss",
+    "pages/scroll/scroll"
+    
+  ],
+  "usingComponents": {
+    "my-cpn1": "/components/my-cpn/my-cpn"
+  },
+  "sitemapLocation": "sitemap97.json"
 }

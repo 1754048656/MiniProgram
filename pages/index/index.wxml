@@ -1,2 +1,66 @@
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
+<!-- 组件给页面传数据，发射自定义事件 -->
+<my-event bind:handle_click="handle_click"/>
+<view>counter: {{counter}}</view>
+<view>detail: {{detail_name +' and '+ detail_age}}</view>
+
+<!-- 给自定义组件传递数据/样式 -->
+<my-prop my="ysx1" thinking="cnm1" title-class="green" content-class="green"/>
+<my-prop my="ysx2" thinking="cnm2" title-class="blue" content-class="blue"/>
+<my-prop my="ysx3" thinking="cnm3" title-class="purple" content-class="purple"/>
+
+
+<!-- 页面注册自定义组件 -->
+<my-cpn />
+
+<!-- 全局注册自定义组件                   都要按情况加-->
+<my-cpn1 />
+
+
+<!-- 常见的事件 -->
+
+<view class="box"
+      bind:touchstart="handleTouchStart"
+      bind:touchmove="handleTouchMove"
+      bind:touchend="handleTouchEnd"
+      bind:tap="handleTap"
+      bind:longpress="handleLongpress">
+</view>
+
+
+
+<!-- 事件对象的点击 -->
+<view class="outer" bind:tap="handleOuter">outer
+  <view class="inner" bind:tap="handleInner">inner</view>
+</view>
+
+
+
+
+<!-- 事件传参 -->
+<view class="contain">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="item" 
+          bind:tap="handleClick"
+          data-item="{{item}}"
+          data-index="{{index}}">
+      {{item}}
+    </view>
+  </block>
+</view>
+
+
+
+<!-- 事件冒泡和事件捕获 -->
+<!-- bind:一层层传递 -->
+<!-- catch: 阻止事件的进一步传递 -->
+<view class="view1" 
+      capture-catch:tap="handleCaptureView1" 
+      bind:tap="handleBindView1">
+  <view class="view2" 
+        capture-bind:tap="handleCaptureView2"
+        bind:tap="handleBindView2">
+    <view class="view3" class="view3" 
+          capture-bind:tap="handleCaptureView3"                                            bind:tap="handleBindView3">
+    </view>
+  </view>
+</view>

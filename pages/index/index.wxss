@@ -1,4 +1,65 @@
-.title {
-  color: red;
-  font-size: 20px;
+.box {
+  height: 300rpx;
+  width: 300rpx;
+  background: yellow;
+}
+
+
+
+.inner {
+  background: black;
+  color: white;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.outer {
+  background: gray;
+  color: white;
+  width: 300rpx;
+  height: 300rpx;
+
+}
+
+
+.contain {
+  display: flex;
+}
+
+
+.item {
+  flex: 1;
+  text-align: center;
+
+}
+
+.view1 {
+  background: black;
+  height: 500rpx;
+  width: 500rpx;
+}
+
+.view2 {
+  background: purple;
+  height: 400rpx;
+  width: 400rpx;
+}
+
+.view3 {
+  background: red;
+  height: 300rpx;
+  width: 300rpx;
+}
+
+
+.blue {
+  color: blue;
+}
+
+.purple {
+  color: purple
+}
+
+.green {
+  color: green;
 }

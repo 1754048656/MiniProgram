@@ -1,0 +1,19 @@
+<!-- <template name="ysx">
+  <view>{{t1}}</view>
+  <button size="mini">{{t2}}</button>
+</template> -->
+
+<import src="/wxml/template.wxml" />
+
+<template is="ysx" data="{{t1: 'ysx',t2: 'kgl'}}" />
+<template is="ysx" data="{{t1: 'ysx',t2: 'kgl'}}" />
+<template is="ysx" data="{{t1: 'ysx',t2: 'kgl'}}" />
+
+<!-- 结论：关于wxml的导入有两种方式
+import导入：
+	1.主要导入template
+	2.特点：不能进行递归导入
+include引入：
+	1.将公共的wxml中的组件抽取到一个文件中
+	2.特点：不能导入template/wxs，可以进行递归导入 -->
+

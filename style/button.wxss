@@ -1,0 +1,9 @@
+.btn {
+  height: 100rpx;
+  width: 200rpx;
+  display: inline-block;
+  background: purple;
+  color: white;
+  font-size: 40rpx;
+  text-align: center;
+}

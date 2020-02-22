@@ -1,0 +1,23 @@
+<view class="view1 {{isActive ? 'active' : ''}}">{{message}}</view>
+<button class="btn" bindtap="handleClick">xxx</button>
+
+<view>{{nowTime}}</view>
+
+<view wx:if="{{isShow}}">ysximissyou</view>
+
+
+<!-- block 只是起一个包裹作用，不会渲染，提高性能 -->
+<block wx:for="{{5}}" wx:key="item">
+  <view>{{item}}</view>
+</block>
+
+
+<!-- wx:for-item="item1" 套娃更加清楚-->
+<block wx:for="{{list}}" wx:for-item="item1" wx:key="item1">
+  <block wx:for="{{item1}}" wx:key="item">
+    <view>{{item}}</view>
+  </block>
+</block>
+
+
+<!-- key也是提高性能 -->

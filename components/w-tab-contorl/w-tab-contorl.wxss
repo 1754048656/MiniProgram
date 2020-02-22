@@ -1,0 +1,21 @@
+/* components/w-tab-contorl/w-tab-contorl.wxss */
+.tabContorl {
+  height: 88rpx;
+  display: flex;
+  background: whitesmoke;
+  line-height: 88rpx;
+}
+
+.itemTab {
+  flex: 1;
+  text-align: center;
+}
+
+.active {
+  color: red;
+}
+
+.active text {
+  border-bottom: 4rpx solid red;
+  padding: 14rpx 10rpx;
+}

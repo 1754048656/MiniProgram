@@ -1,0 +1,4 @@
+<template name="ysx">
+  <view>{{t1}}</view>
+  <button size="mini">{{t2}}</button>
+</template>

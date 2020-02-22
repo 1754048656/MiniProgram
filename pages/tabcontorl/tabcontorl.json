@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "w_tab_contorl": "/components/w-tab-contorl/w-tab-contorl" 
+  }
+}

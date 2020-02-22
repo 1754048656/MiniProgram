@@ -1,0 +1,10 @@
+<view class="tabContorl">
+  <view wx:for="{{tabList}}" 
+        class="itemTab {{currentIndex === index ? 'active' : ''}}"
+        wx:key="index" 
+        bind:tap="handle_click"
+        data-index="{{index}}"
+        data-item="{{item}}">
+    <text>{{item}}</text>
+  </view>
+</view>
