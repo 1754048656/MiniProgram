@@ -7,6 +7,10 @@ Page({
   data: {
     tabList: ['衣服', '裤子', '鞋子']
   },
+  dataShowClick(event) {
+    console.log(event)
+  }
+  ,
 
   /**
    * 生命周期函数--监听页面加载

@@ -27,6 +27,11 @@ Component({
         currentIndex: event.currentTarget.dataset.index
       })
       console.log(this.data.currentIndex)
+
+      this.triggerEvent('dataShowClick', {
+        targetIndex: this.data.currentIndex,
+        targetItem: event.currentTarget.dataset.item
+      }, {})
     }
   }
 })

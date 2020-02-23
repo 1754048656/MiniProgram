@@ -1,1 +1,1 @@
-<w_tab_contorl tabList="{{tabList}}"/>
+<w_tab_contorl tabList="{{tabList}}" bind:dataShowClick="dataShowClick"/>

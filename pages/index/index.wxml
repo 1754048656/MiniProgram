@@ -1,14 +1,28 @@
+<!-- slot -->
+
+
+
+
+<slider value="60"></slider>
+
+<!-- 获取组件对象 -->
+<button class="button" class="" bind:tap="handleIncrementCpn">button</button>
+<my-sel class="sel-class" id="sel-id"/>
+
+
+<view>---------------------------</view>
 <!-- 组件给页面传数据，发射自定义事件 -->
 <my-event bind:handle_click="handle_click"/>
 <view>counter: {{counter}}</view>
 <view>detail: {{detail_name +' and '+ detail_age}}</view>
 
+<view>---------------------------</view>
 <!-- 给自定义组件传递数据/样式 -->
 <my-prop my="ysx1" thinking="cnm1" title-class="green" content-class="green"/>
 <my-prop my="ysx2" thinking="cnm2" title-class="blue" content-class="blue"/>
 <my-prop my="ysx3" thinking="cnm3" title-class="purple" content-class="purple"/>
 
-
+<view>---------------------------</view>
 <!-- 页面注册自定义组件 -->
 <my-cpn />
 

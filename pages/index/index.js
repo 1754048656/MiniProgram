@@ -68,6 +68,17 @@ Page({
       detail_age: event.detail.age
     })
     
+  },
+
+  handleIncrementCpn() {
+    const select = this.selectComponent('#sel-id')
+    console.log(select)
+
+    // 在这里功过setData({})改变组件内的数据不合理
+    // 通过方法对数据进行修改
+    select.incrementCounter(20)
+      
+    
   }
 
 })

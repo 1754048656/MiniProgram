@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/tabcontorl/tabcontorl",
     "pages/index/index",
+    "pages/tabcontorl/tabcontorl",
     "pages/wxs/wxs",
     "pages/template/tamplate",
     "pages/mustache/mustache",
