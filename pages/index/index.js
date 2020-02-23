@@ -1,3 +1,5 @@
+import request from '../../service/network/network.js'
+// 必须写相对路径
 Page({
 
   /**
@@ -6,60 +8,54 @@ Page({
   data: {
     
   },
+  onLoad() {
+    // 1.发送最简单的get请求
+    // wx:request({
+    //   url: "",
+    //   success: function(res) {
+    //     console.log(res)
+    //   }
+    // }),
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
-  },
+    //2.携带参数的get请求
+    // wx:request({
+    //   url: '',
+    //   data: {
+    //     type: 'sell',
+    //     page: 1
+    //   },
+    //   success: function(res) {
+    //     console.log(res)
+    //   }
+    // }),
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
+    // 3.post请求
+    // wx.request({
+    //   url: 'http://httpbin.org/post',
+    //   method: 'post',
+    //   data: {
+    //     name: 'xxx',
+    //     age: 18
+    //   },
+    //   success: function(res) {
+    //     console.log(res)
+    //   }
+    // })
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
+    // 4.用工具类请求数据
+    request({
+      url: 'http://httpbin.org/post',
+      method: 'post',
+      data: {
+        name: 'ysx',
+        age: 18
+      }
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
     
   }
 })
