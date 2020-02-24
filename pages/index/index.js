@@ -1,65 +1,70 @@
-Page({
+const app = getApp()
 
-  /**
-   * 页面的初始数据
-   */
+app.globalData.token
+
+Page({
   data: {
     
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
+  handleShowToast() {
+    wx.showToast({
+      title: 'ysx',
+      icon: 'loading',
+      duration: 2000,
+      mask: true
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
+  handleShowModal() {
+    wx.showModal({
+      title: 'ysx',
+      content: 'wan',
+      showCancel: true,
+      cancelText: 'huilai',
+      cancelColor: 'red',
+      confirmText: 'fuhe',
+      confirmColor: 'red',
+      success(res) {
+        if(res.cancel) {
+          console.log('用户点击回来')
+        }
+        if(res.confirm) {
+          console.log('用户点击复合')
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  handleShowLoading() {
+    wx.showLoading({
+      title: 'ysx',
+      mask: true,
+      success(res) {
+        setTimeout(() => {
+          wx.hideLoading()
+        }, 1000)
+      } 
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
+  handleShowActionSheet() {
+    wx.showActionSheet({
+      itemList: ['ysx','wan'],
+      itemColor: 'red',
+      success(res) {
+        console.log(res)
+        if(res.tapIndex === 0) {
+          console.log('用户点击了第零个')
+        } else if (res.tapIndex === 1) {
+          console.log('用户点击了第一个')
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+  onShareAppMessage: function(options) {
+    return {
+      title: '你好啊,ysx',
+      path: '/pages/index/index',
+      imageUrl: 'http://p1.music.126.net/J759PR3d7oSJy2mgpUIPYg==/109951164733623757.jpg?imageView&quality=89'
+    }
   }
+
+  
 })
